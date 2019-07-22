@@ -29,7 +29,7 @@ class SearchResultsViewCell: UITableViewCell {
     
     func Update(result: Result){
         titleLabel.text = result.title
-        priceLabel.text = result.price.description
+        priceLabel.text =  "$ \(result.price.description)"
 
         self.productImage.downloaded(from: result.thumbnail )
         

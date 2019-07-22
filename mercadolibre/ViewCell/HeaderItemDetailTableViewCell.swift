@@ -32,7 +32,7 @@ class HeaderItemDetailTableViewCell: UITableViewCell {
             StateAndSellers.text = result?.condition == "new" ? NSLocalizedString("Condition_New", comment: "") : NSLocalizedString("Condition_Used", comment: "")
         }
         Title.text = result?.title
-        Pricing.text = result?.price?.description
+        Pricing.text = "$ \(result?.price?.description ?? "0")"
     }
     
 }
