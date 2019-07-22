@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Buscar-->
+        <!--Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mercadolibre" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,8 +32,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Buscar" id="vMN-4I-ZlQ">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="PT2-d6-VIg"/>
+                    <navigationItem key="navigationItem" title="Search" id="vMN-4I-ZlQ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="PT2-d6-VIg"/>
                     </navigationItem>
                     <connections>
                         <outlet property="resultsTable" destination="VP3-KN-GWh" id="q3P-5x-b1m"/>
