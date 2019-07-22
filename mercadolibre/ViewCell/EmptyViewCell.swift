@@ -2,7 +2,7 @@
 //  EmptyViewCell.swift
 //  mercadolibre
 //
-//  Created by Luciano Bolzico on 22/07/2019.
+//  Created by Maximiliano Talenti on 22/07/2019.
 //  Copyright © 2019 Maximiliano Talenti. All rights reserved.
 //
 

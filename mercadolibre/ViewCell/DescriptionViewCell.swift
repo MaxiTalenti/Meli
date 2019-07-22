@@ -2,7 +2,7 @@
 //  DescriptionViewCell.swift
 //  mercadolibre
 //
-//  Created by Luciano Bolzico on 22/07/2019.
+//  Created by Maximiliano Talenti on 22/07/2019.
 //  Copyright © 2019 Maximiliano Talenti. All rights reserved.
 //
 
@@ -10,6 +10,7 @@ import UIKit
 
 class DescriptionViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleDescription: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,7 @@ class DescriptionViewCell: UITableViewCell {
     }
     
     func Update(Desc : String) {
+        titleDescription.text = NSLocalizedString("KeyDescription", comment: "")
         labelDescription.text = Desc
     }
 }

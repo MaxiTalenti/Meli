@@ -2,14 +2,8 @@
 //  Product.swift
 //  mercadolibre
 //
-//  Created by Luciano Bolzico on 19/07/2019.
+//  Created by Maximiliano Talenti on 19/07/2019.
 //  Copyright © 2019 Maximiliano Talenti. All rights reserved.
-
-import Foundation
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let products = try? newJSONDecoder().decode(Products.self, from: jsonData)
 
 import Foundation
 

@@ -46,6 +46,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="labelDescription" destination="Sdm-NK-hzQ" id="VwK-1E-24g"/>
+                <outlet property="titleDescription" destination="iuA-NM-ddL" id="JEC-s7-Iec"/>
             </connections>
             <point key="canvasLocation" x="213.768115942029" y="141.29464285714286"/>
         </tableViewCell>

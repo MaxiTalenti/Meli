@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  mercadolibre
+
+  Created by Maximiliano Talenti on 22/07/2019.
+  Copyright © 2019 Maximiliano Talenti. All rights reserved.
+*/
+
+"EmptySearch" = "Haga una búsqueda";
+"FreeShipping" = "Envío gratis";
+"Condition_New" = "Nuevo";
+"Condition_Used" = "Usado";
+"Quantity_Cuotes" = "Hasta %@ cuotas sin interés";
+"KeyDescription" = "Descripción";

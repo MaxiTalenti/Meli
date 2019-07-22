@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  mercadolibre
 //
-//  Created by Luciano Bolzico on 19/07/2019.
+//  Created by Maximiliano Talenti on 19/07/2019.
 //  Copyright © 2019 Maximiliano Talenti. All rights reserved.
 //
 

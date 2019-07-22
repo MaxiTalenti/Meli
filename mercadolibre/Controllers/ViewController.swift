@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  mercadolibre
 //
-//  Created by Luciano Bolzico on 18/07/2019.
+//  Created by Maximiliano Talenti on 18/07/2019.
 //  Copyright © 2019 Maximiliano Talenti. All rights reserved.
 //
 
@@ -17,8 +17,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Buscar";
-        
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
         search.searchBar.delegate = self
@@ -53,7 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cell
         } else {
             let cell = Bundle.main.loadNibNamed("EmptyViewCell", owner: self, options: nil)?.first as! EmptyViewCell
-            cell.Update(Info: "Haga una búsqueda", Imagen: "buscar")
+            cell.Update(Info: NSLocalizedString("EmptySearch", comment: ""), Imagen: "buscar")
             return cell
         }
     }
@@ -82,16 +80,7 @@ extension ViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         if let text = searchController.searchBar.text, !text.isEmpty {
             print(text)
-            //self.filtered = self.countries.filter({ (country) -> Bool in
-            //    return country.lowercased().contains(text.lowercased())
-            //})
-            //self.filterring = true
         }
-        else {
-            //self.filterring = false
-            //self.filtered = [String]()
-        }
-        //self.table.reloadData()
     }
 }
 

@@ -2,7 +2,7 @@
 //  ProductDetailViewController.swift
 //  mercadolibre
 //
-//  Created by Luciano Bolzico on 18/07/2019.
+//  Created by Maximiliano Talenti on 18/07/2019.
 //  Copyright © 2019 Maximiliano Talenti. All rights reserved.
 //
 
@@ -109,13 +109,13 @@ class ProductDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     func GetCredit() -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("DetailItemViewCell", owner: self, options: nil)?.first as! DetailItemViewCell
-        cell.Update(Imagen: "tarjetadecredito", Informacion: "Hasta \(self.Producto?.installments?.quantity ?? 0) cuotas sin interes")
+        cell.Update(Imagen: "tarjetadecredito", Informacion: String.localizedStringWithFormat(NSLocalizedString("Quantity_Cuotes", comment: ""), self.Producto?.installments?.quantity.description ?? "0"))
         return cell
     }
     
     func GetDelivery() -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("DetailItemViewCell", owner: self, options: nil)?.first as! DetailItemViewCell
-        cell.Update(Imagen: "envio", Informacion: "Envío gratis")
+        cell.Update(Imagen: "envio", Informacion: NSLocalizedString("FreeShipping", comment: ""))
         return cell
     }
     

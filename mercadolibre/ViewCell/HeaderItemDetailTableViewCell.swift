@@ -2,7 +2,7 @@
 //  HeaderItemDetailTableViewCell.swift
 //  mercadolibre
 //
-//  Created by Luciano Bolzico on 21/07/2019.
+//  Created by Maximiliano Talenti on 21/07/2019.
 //  Copyright © 2019 Maximiliano Talenti. All rights reserved.
 //
 
@@ -27,9 +27,9 @@ class HeaderItemDetailTableViewCell: UITableViewCell {
     
     func Update(_ result : Item?) {
         if (result?.soldQuantity != nil) {
-            StateAndSellers.text = "\(result?.condition == "new" ? "Nuevo" : "Usado") - \(result?.soldQuantity?.description ?? "0") vendidos"
+            StateAndSellers.text = "\(result?.condition == "new" ? NSLocalizedString("Condition_New", comment: "") : NSLocalizedString("Condition_Used", comment: "")) - \(result?.soldQuantity?.description ?? "0") vendidos"
         } else {
-            StateAndSellers.text = result?.condition == "new" ? "Nuevo" : "Usado"
+            StateAndSellers.text = result?.condition == "new" ? NSLocalizedString("Condition_New", comment: "") : NSLocalizedString("Condition_Used", comment: "")
         }
         Title.text = result?.title
         Pricing.text = result?.price?.description

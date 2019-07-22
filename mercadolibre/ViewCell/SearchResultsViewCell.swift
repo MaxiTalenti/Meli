@@ -2,7 +2,7 @@
 //  SearchResultsViewCell.swift
 //  mercadolibre
 //
-//  Created by Luciano Bolzico on 19/07/2019.
+//  Created by Maximiliano Talenti on 19/07/2019.
 //  Copyright © 2019 Maximiliano Talenti. All rights reserved.
 //
 
@@ -48,7 +48,7 @@ class SearchResultsViewCell: UITableViewCell {
             return ""
         }
         if (result?.rate == 0) {
-            return "Hasta \(result?.quantity ?? 0) cuotas sin interés"
+            return String.localizedStringWithFormat(NSLocalizedString("Quantity_Cuotes", comment: ""), result?.quantity.description ?? "0")
         }
         else {
             return ""
@@ -61,7 +61,7 @@ class SearchResultsViewCell: UITableViewCell {
             return ""
         }
         if (result?.freeShipping ?? false) {
-            return "Envío gratis"
+            return NSLocalizedString("FreeShipping", comment: "")
         }
         else {
             return ""
@@ -71,7 +71,7 @@ class SearchResultsViewCell: UITableViewCell {
     // Verifica si es usado
     func IsUsed(result: Result) -> String {
         if (result.condition == "used") {
-            return "Usado"
+            return NSLocalizedString("Condition_Used", comment: "")
         }
         else {
             return ""
