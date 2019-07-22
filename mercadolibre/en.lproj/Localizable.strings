@@ -12,3 +12,4 @@
 "Condition_Used" = "Used";
 "Quantity_Cuotes" = "Up to %@ installments without interest";
 "KeyDescription" = "Description";
+"ErrorSearch" = "We could not find results with your search";

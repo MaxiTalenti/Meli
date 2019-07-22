@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if products != nil{
-            return products.results.count
+            return products.results.count == 0 ? 1 : products.results.count
         }
         else {
             return 1
@@ -46,9 +46,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (products != nil) {
-            let cell = Bundle.main.loadNibNamed("SearchResultsViewCell", owner: self, options: nil)?.first as! SearchResultsViewCell
-            cell.Update(result: products.results[indexPath.row])
-            return cell
+            if (products.results.count != 0) {
+                let cell = Bundle.main.loadNibNamed("SearchResultsViewCell", owner: self, options: nil)?.first as! SearchResultsViewCell
+                cell.Update(result: products.results[indexPath.row])
+                return cell
+            } else {
+                let cell = Bundle.main.loadNibNamed("EmptyViewCell", owner: self, options: nil)?.first as! EmptyViewCell
+                cell.Update(Info: NSLocalizedString("ErrorSearch", comment: ""), Imagen: "error")
+                return cell
+            }
         } else {
             let cell = Bundle.main.loadNibNamed("EmptyViewCell", owner: self, options: nil)?.first as! EmptyViewCell
             cell.Update(Info: NSLocalizedString("EmptySearch", comment: ""), Imagen: "buscar")
@@ -68,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (products == nil) {
+        if (products == nil || products.results.count == 0) {
             return self.resultsTable.frame.height
         } else {
             return UITableView.automaticDimension
