@@ -17,14 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let search = UISearchController(searchResultsController: nil)
-        search.searchResultsUpdater = self
-        search.searchBar.delegate = self
-        self.navigationItem.searchController = search
-        self.navigationItem.searchController?.searchBar.placeholder = "iPhone, Mac.."
-        navigationItem.largeTitleDisplayMode = .automatic
-        navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.searchController?.dimsBackgroundDuringPresentation = false
+        ConfigureSearchBar()
         
         self.resultsTable.dataSource = self
         self.resultsTable.delegate = self
@@ -33,6 +26,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func ConfigureSearchBar() {
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.searchBar.delegate = self
+        self.navigationItem.searchController = search
+        self.navigationItem.searchController?.searchBar.placeholder = "iPhone, Mac.."
+        navigationItem.largeTitleDisplayMode = .automatic
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController?.dimsBackgroundDuringPresentation = false
+        UIBarButtonItem.appearance(whenContainedInInstancesOf:[UISearchBar.self]).tintColor = UIColor.init(red: 92/255, green: 92/255, blue: 112/255, alpha: 1)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

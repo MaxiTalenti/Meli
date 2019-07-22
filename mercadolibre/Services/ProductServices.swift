@@ -10,9 +10,9 @@ import Foundation
 
 class ProductServices  {
 
-    func Search(fromText text: String) -> Products {
+    /*
+    func Search(fromText text: String) {
         let url = URL(string: "https://api.mercadolibre.com/sites/MLA/search?q=\(text)")!
-        var results: Products!
         let task = 	URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             
@@ -22,7 +22,6 @@ class ProductServices  {
                     do {
                         let decoder = JSONDecoder()
                         let productResult = try decoder.decode(Products.self, from: data)
-                        results = productResult
                     }
                     catch {
                         print(error.localizedDescription)
@@ -31,11 +30,8 @@ class ProductServices  {
             }
         }
         task.resume()
-        
-        return results
     }
     
-    /*
     func Search2(text: String) -> Any?{
         guard let url = URL(string: "https://api.mercadolibre.com/sites/MLA/search?q=\(text)") else { return }
         
